@@ -42,7 +42,6 @@ for file_name in os.listdir(data_dir):
 df = pd.concat(df_list, ignore_index=True)
 # 欠損値の削除
 df.dropna(inplace=True)
-# ここらへんに単語減らす機能入れようとしてやめたのでエラー出たら以前のを持ってくる
 # 入力と応答で分割
 x = df["user"]
 y = df["cpu"]
@@ -75,9 +74,7 @@ training_args = TrainingArguments(
     evaluation_strategy="steps",
     per_device_train_batch_size=6,
     per_device_eval_batch_size=6,
-    # gradient_accumulation_steps=2,
-    # warmup_steps=500,
-    weight_decay=0.001, # 1e-5にしてみる、エポック少なくしておく
+    weight_decay=0.001,
     logging_steps = 200,
     eval_steps=200
 )

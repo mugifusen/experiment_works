@@ -24,18 +24,18 @@ class EmotionAnalyzer:
 
         if label == "POSITIVE":
             if score <= 0.5:
-                return "😊"
+                return "😊"(´∇｀) 
             else:
-                return "🥰"
+                return "🥰"(*ﾟ▽ﾟ)ﾉ 
         
         elif label == "NEGATIVE":
             if score <= 0.5:
-                return "🙄"
+                return "🙄"(T ^ T)
             else:
-                return "😭"
+                return "😭"(＞＜) 
         else:
             # ニュートラルの時
-            return "🤭"
+            return "🤭"(´·ω·`)
 
 if __name__=='__main__':
     text = "美味しいごはんが好きなんだー"
@@ -43,5 +43,5 @@ if __name__=='__main__':
 
     # テキストの感情分析を実行
     emotion_data = analyzer.analyze_emotion(text)
-    emoji = analyzer.select_emoji(emotion_data)
-    print(emoji)
+    kaomoji = analyzer.select_emoji(emotion_data)
+    print(kaomoji)

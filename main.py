@@ -5,9 +5,6 @@ from T5_inference import TextGenerator
 TextGen = TextGenerator()
 EAnalyze = EmotionAnalyzer()
 
-print("Start Nagomi Chat!\n")
-print("やあやあNagomiだよ～")
-
 # 過去の対話を保存するためのリストを初期化
 past_dialogue = []
 
