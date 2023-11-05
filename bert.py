@@ -24,18 +24,18 @@ class EmotionAnalyzer:
 
         if label == "POSITIVE":
             if score <= 0.5:
-                return "😊"(´∇｀) 
+                return "(´∇｀) "
             else:
-                return "🥰"(*ﾟ▽ﾟ)ﾉ 
+                return "(*ﾟ▽ﾟ)ﾉ "
         
         elif label == "NEGATIVE":
             if score <= 0.5:
-                return "🙄"(T ^ T)
+                return "(T ^ T)"
             else:
-                return "😭"(＞＜) 
+                return "(> <)" 
         else:
             # ニュートラルの時
-            return "🤭"(´·ω·`)
+            return "(´·ω·`)"
 
 if __name__=='__main__':
     text = "美味しいごはんが好きなんだー"
